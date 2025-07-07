@@ -1,0 +1,36 @@
+package screens;
+
+import javax.swing.JFrame;
+import javax..swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.
+
+public class VentanaPrincipal extends JFrame {
+
+    private JMenuBar menubar;
+    private JMenu menuAlumnos;
+    private JMneuItem menuTnsertarAlumnos;
+
+    public VentanaPrincipal(String title){
+        this.setTitle(title);
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        initComponents();
+    }
+    privte void initComponents(){
+
+        menubar = new JMenuBar();
+
+        menuAlumnos = new JMenu();
+        menuAlumnos.setText("Alumnos");
+
+        menuTnsertarAlumnos = new JMneuItem();
+        menuTnsertarAlumnos.setText("Insertar...");
+
+        menuAlumnos.add(menuTnsertarAlumnos);
+        menubar.add(menuAlumnos);
+        this.setJMenubar(menubar); //Es la unica barra de Jframe
+
+        pack(); //Emapaquetar los componentes de Jframe
+    }
+    
+}
